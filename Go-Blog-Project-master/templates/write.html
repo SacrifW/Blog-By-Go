@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Бложик: добавить пост</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/templates/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body>
+<div class="main">
+    <div class="header">
+        <div class="header_resize">
+            <div class="logo">
+                <h1><a href="index.html">Бложик<small>Бессмысленный и беспощадный</small></a></h1>
+            </div>
+            <div class="clr"></div>
+            <div class="menu_nav">
+                <ul>
+                    <li><a href="http://localhost:8080/signup" methods="get"><span>Авторизация</span></a></li>
+                    <li><a href="http://localhost:80800/index" methods="get"><span>Главная страница</span></a></li>
+                    <li><a href="http://localhost:8080/private" methods="get"><span>Мой профиль</span></a></li>
+                    <li class="active"><a href="http://localhost:8080/write" methods="get"><span>Добавить пост</span></a></li>
+                    <li><a href="http://localhost:8080/support" methods="get"><span>Поддержка</span></a></li>
+                </ul>
+            </div>
+
+            <div class="clr"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content_resize">
+            <div class="mainbar">
+
+<div class="wrire_post">
+    <form role="form" action="/write" method="post" enctype="application/x-www-form-urlencoded">
+      <div class="post_content">
+          <input type="hidden" name="id"/>
+        <div><label for="title"><span><h2>Добавить новый пост: </h2></span></label><br/>
+          <input type="text" placeholder="Введите заголовок" name="title" required><br/></div>
+
+          <div><label for="content">Напишите что-нибудь:</label><br/>
+        <textarea rows="7" cols="50" name="content" required></textarea><br/></div>
+      </div>
+
+      <div>
+          <button type="submit" class="post_content" onclick="posting()">Опубликовать</button>
+      </div>
+
+
+    </form>
+</div>
+
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div class="fbg">
+        <div class="fbg_resize">
+
+            <div class="col c3">
+                <h2><span>Contact</span></h2>
+                <p>Если очень надо, стучаться сюда:</p>
+                <p class="contact_info"> <span>Address:</span>Какая-то улица, Киев <br/>
+                    <span>Telephone:</span> +38-097-777-77-77<br/>
+                    <span>E-mail:</span> <a href="#">sacrifw@gmail.com</a> </p>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>(с)2020 пороблено в Україні</div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Бложик</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/templates/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body>
+<div class="main">
+    <div class="header">
+        <div class="header_resize">
+            <div class="logo">
+                <h1><a href="index.html">Бложик<small>Бессмысленный и беспощадный</small></a></h1>
+            </div>
+            <div class="clr"></div>
+            <div class="menu_nav">
+                <ul>
+                    <li class="active"><a href="http://localhost:8080/signup" methods="get"><span>Авторизация</span></a></li>
+                    <li><a href="http://localhost:8080/index" methods="get"><span>Главная страница</span></a></li>
+                    <li><a href="http://localhost:8080/write" methods="get"><span>Добавить пост</span></a></li>
+                    <li><a href="http://localhost:8080/support" methods="get"><span>Поддержка</span></a></li>
+                </ul>
+            </div>
+
+            <div class="clr"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content_resize">
+            <div class="mainbar">
+
+               <div class="signup">
+                   <form action="/signup" method="post" enctype="application/x-www-form-urlencoded">
+                       <div class="container-reg">
+                           <h1>Регистрация пользователя</h1>
+                           <p>Заполните все поля, чтобы создать аккаунт:</p>
+
+                           <hr>
+                           <label for="name"><b>Имя</b></label><br>
+                           <input type="text" placeholder="Введите имя" name="name" required><br>
+
+                           <label for="email"><b>Email</b></label><br>
+                           <input type="email" placeholder="Введите Email" name="email" required><br>
+
+                           <label for="password"><b>Пароль</b></label><br>
+                           <input type="password" placeholder="Придумайте пароль" name="about" required><br>
+
+                           <label for="about"><b>Немного обо мне</b></label><br>
+                           <input type="text" placeholder="Пару слов о себе, пожалуйста" name="about" required><br>
+
+                           <label for="image"><b>Загрузите аватар</b></label><br>
+                           <input type="text" name="image" formmethod="post", formenctype="multipart/form-data">
+                           <div> Вставьте URL любой картинки из интернета. Мы делаем так не потому что у нас лапки, а потому что мы заботимся о вас и вашей конфиденциальности. </div><br>
+                           <hr>
+
+
+                           <button class="registerbtn" type="submit">Зарегистрироваться</button>
+                       </div>
+
+                   </form>
+                   <div class="signin">
+                       <p> Уже есть аккаунт? <a href="http://localhost:8080/login">ВОЙТИ</a></p>
+                   </div>
+               </div>
+
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div class="fbg">
+        <div class="fbg_resize">
+
+            <div class="col c3">
+                <h2><span>Contact</span></h2>
+                <p>Если очень надо, стучаться сюда:</p>
+                <p class="contact_info"> <span>Address:</span>Какая-то улица, Киев <br/>
+                    <span>Telephone:</span> +38-097-777-77-77<br/>
+                    <span>E-mail:</span> <a href="#">sacrifw@gmail.com</a> </p>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>(с)2020 пороблено в Україні</div>
+    </div>
+</div>
+</body>
+</html>
