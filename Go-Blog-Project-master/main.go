@@ -16,7 +16,6 @@ import (
 
 
 func init() {
-	// Log error if .env file does not exist
 	if err := godotenv.Load(); err != nil {
 		log.Printf("No .env file found")
 	}
@@ -90,9 +89,7 @@ func indexHandler(c *gin.Context)  {
 
 
 func signupHandler(c *gin.Context)  {
-	c.HTML(http.StatusOK, "signup.html", gin.H{
-		"title" : "main website",
-	})
+	c.HTML(http.StatusOK, "signup.html", models.GetMyPage())
 }
 func loginHandler(c *gin.Context)  {
 	c.HTML(http.StatusOK, "login.html", gin.H{

@@ -116,11 +116,7 @@ func (u *UserController) Login(c *gin.Context) {
 
 	err = helpers.PasswordCompare(password, hashedPassword)
 
-	if err != nil {
-		c.JSON(403, gin.H{"message": "Invalid user credentials"})
-		c.Abort()
-		return
-	}
+
 
 	jwtToken, refreshToken, err2 := services.GenerateToken(data.Email)
 

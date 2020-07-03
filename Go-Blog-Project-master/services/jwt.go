@@ -72,7 +72,6 @@ func GenerateNonAuthToken(userID string) (string, error) {
 	return tokenString, err
 }
 
-// DecodeNonAuthToken handles decoding a jwt token
 func DecodeNonAuthToken(tkStr string) (string, error) {
 	claims := &Claims{}
 
@@ -94,7 +93,6 @@ func DecodeNonAuthToken(tkStr string) (string, error) {
 	return claims.UserID, nil
 }
 
-// DecodeToken handles decoding a jwt token
 func DecodeToken(tkStr string) (string, error) {
 	claims := &Claims{}
 
@@ -116,7 +114,6 @@ func DecodeToken(tkStr string) (string, error) {
 	return claims.UserID, nil
 }
 
-// DecodeRefreshToken handles decoding refresh token
 func DecodeRefreshToken(tkStr string) (string, error) {
 	claims := &Claims{}
 

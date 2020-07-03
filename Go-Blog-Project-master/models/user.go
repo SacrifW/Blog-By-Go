@@ -1,11 +1,11 @@
 package models
 
 import (
+	"Go-Blog-Project-master/forms"
 	"Go-Blog-Project-master/helpers"
 	"fmt"
 	_ "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"Go-Blog-Project-master/forms"
 )
 
 type User struct {
@@ -32,7 +32,7 @@ func (u *UserModel) Signup(data forms.SignupUserCommand) error {
 		"about": data.About,
 		"image": data.Image,
 		// This will come later when adding verification
-		"is_verified": true,
+		"is_verified": false,
 	})
 
 	return err
@@ -46,7 +46,7 @@ func (u *UserModel) GetUserByEmail(email string) (user User, err error) {
 	return user, err
 }
 
-func GetMyPage() (data []forms.SignupUserCommand) {
+func GetMyPage() (data forms.SignupUserCommand) {
 var email string
 	userCollection := dbConnect.Use("BlogDB", "user")
 
@@ -54,7 +54,9 @@ var email string
 	if err != nil{
 		fmt.Println(err)
 	}
-	return
+
+return
+
 }
 
 
